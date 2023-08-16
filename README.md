@@ -9,8 +9,7 @@
 <h1>Accessible Elements</h1>
 
 <section>
- 
-  
+
   <h2>Checkbox Input</h2> 
   <h3>Examples</h3>
   
@@ -20,7 +19,7 @@
   <input type="text">
   
   <h4>Good Example</h4>
-  <label for="text-input"">Real Label</label>
+  <label for="text-input">Real Label</label>
   <input type="text" id="text-input">
   
 
