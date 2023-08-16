@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+<style>
+body {
+  height: 100%;
+  width: 100%;
+}
+section {
+  padding: 24px;
+  min-height: 80vh;
+  border-bottom: 5px solid grey;
+}
+
+.button {
+  display: inline-block;
+  background: tomato;
+  color: white;
+  padding: 18px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.button:active {
+  background: rebeccapurple;
+}
+</style>
 <title>How to make a website accessible</title>
-        <!--add stylesheet
-<link rel="stylesheet" href="style.css"/> -->
+    
     </head>
 <body>
 <h1>Accessible Elements</h1>
