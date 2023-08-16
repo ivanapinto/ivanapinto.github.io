@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-<title>Little Lemon</title>
-<link rel="stylesheet" href="style.css"/>
+<title>How to make a website accessible</title>
+        <!--add stylesheet
+<link rel="stylesheet" href="style.css"/> -->
     </head>
 <body>
-<h1 id="header1">Our Menu</h1>
-<h2>Falafel</h2>
+<h1>Accessible Elements</h1>
+<h2>Checkbox Input</h2>
+     <!--Use value and name to send the info to the server. 
+    Use label to add a label-->
+ <label for="my-checkbox">My Checkbox</label>
+  <input type="checkbox" id="my-checkbox">
+
+    <label for ="username">Username:</label> <br>
+    <input type="text" name ="username"> <br>
+
+    
 <p>chickpeas</p>
 <h2>Pasta Salad</h2>
 <p>mozarella</p>
