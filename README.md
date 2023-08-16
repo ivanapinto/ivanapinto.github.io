@@ -22,9 +22,14 @@
   <label for="text-input">Real Label</label>
   <input type="text" id="text-input">
   
+  <h2>Button</h2> 
+  <h3>Examples</h3>
+  
+  <h4>Bad Example</h4>
 
-
-
+ <div class="button">Not a Real Button</div>
+ <h4>Good Example</h4>
+  <button class="button">Real Button</button>
 
 
 
