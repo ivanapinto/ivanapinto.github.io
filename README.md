@@ -7,6 +7,38 @@
     </head>
 <body>
 <h1>Accessible Elements</h1>
+
+<section>
+  <h1>P.O.U.R</h1>
+  <ul>
+    <li>Perceivable</li>
+    <li>Operable</li>
+    <li>Understandable</li>
+    <li>Robust</li>
+  </ul>
+  
+  <h2>Perceivable</h2>
+  <p>Users are able to perceive the content through their senses via the browser or other assistive technology.</p>
+  
+  <h3>Examples</h3>
+  
+  <h4>Bad Example</h4>
+  
+  <span>Fake Label</span>
+  <input type="text">
+  
+  <h4>Good Example</h4>
+  <label for="text-input-ex">Real Label</label>
+  <input type="text" id="text-input-ex">
+  
+
+
+
+
+
+
+
+    
 <h2>Checkbox Input</h2>
      <!--Use value and name to send the info to the server. 
     Use label to add a label-->
