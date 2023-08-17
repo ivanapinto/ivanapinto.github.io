@@ -44,19 +44,22 @@ section {
 
   <span>Fake Label</span>
   <input type="text">
+  <p>This label is just a SPAN tag that isn't associated with the input. Check the accessibility tree and you will see that there is no name associated with the input. </p>
   
   <h4>Good Example</h4>
   <label for="text-input">Real Label</label>
   <input type="text" id="text-input">
+  <p>This label is associated with the actual LABEL tag</p>
   
   <h2>Button</h2> 
   <h3>Examples</h3>
   
   <h4>Bad Example</h4>
-
  <div class="button">Not a Real Button</div>
+ <p> This button is made from a DIV tag. Without additional programming, it would not be accessible for keyboard or screen readers users. It would not get focus when using keyboard and you also can't activate it with a space barusing a keyboard</p>
  <h4>Good Example</h4>
   <button class="button">Real Button</button>
+  <This is using BUTTON tag in HTML>
 
 
 
