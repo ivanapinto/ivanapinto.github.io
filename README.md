@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
 <style>
 body {
@@ -70,7 +70,29 @@ section {
 <p>Start with a simple layout with landmark elements, where the navigation bar is at the top, followed by a main content area and a footer on the botton. Navigation elements are used as shortcuts for assistive technology users, so they can quickly jump to a specific section fo the page. It is very similar to how visual users will look at visual cues on a pake like a navigation bar, headings, etc.</p>
 
 <section>
+  <h2>Form</h2> 
+  <p></p>The FORM tag creates a container for various input elements like text fields, checkboxes, radio buttons, and buttons. Each element shoudl have input and label </p>
+  <form action="">
+<label for="name">Name</label>
+<input type="text" id="name" required>
+<p>for and id establishes the programatic relationship. User can click either direclty in the field or on the label and both will focus the input. You can also give it a required attribute and the browser will incude a built in warning when you try to submit </p>
 
+<label for="email">Email</label>
+<input type="email" id="email" required>
+<p> When using the email type, browser will validat that the value is email. It also allows auto-completion which is very helpful, especially for people that have motor impairments. </p>
+
+    <label>
+    <input type="checkbox">
+    I accept all the <a href="#terms">terms and conditions</a>
+    <label>
+   <input type="submit" value="Sign Up">
+    
+  </form>
+  </section>
+  <section id="terms">
+    <h2>Terms and Conditions</h2>
+    <p> Here are my tertns</p>
+  </section>
   <h2>Checkbox Input</h2> 
   <h3>Examples</h3>
   
