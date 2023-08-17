@@ -279,11 +279,12 @@ It is a tool that gives a developer the power to directly modify the accessibili
 <h2>ARIA DESCRIBED BY</h2>
 Aria described by  uses a text content of an element to describe anothe element on the page. For example, it can be used to describe a label of a text field. When the screen reader describes a label, it will read a text input </p>
 
-<div class="input container">
-<label aria-describedby="name-description" for="name">Name</label>
-<input type="text" id="name" required>
-  <p id="name description">Please enter first and last name</p>
-</div>
+
+ <div class="input-container">
+          <label for="name" aria-describedby="name-description">Name</label>
+          <input type="text" id="name" required>
+          <p id="name-description">Please enter first and last name</p>
+        </div>
 <p> the description "Please enter first and last name" is visually but not programatically associated with the input</p>
 
 <p>chickpeas</p>
