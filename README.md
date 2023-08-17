@@ -117,9 +117,6 @@ section {
   <button class="button">Real Button</button>
   <p></p>This is using BUTTON tag in HTML. This button gets all the functionality out of the box. It is operable by keyboard and the screen reader reads "Real Button button</p>
 
-
-
-
     
 <h2>Checkbox Input</h2>
      <!--Use value and name to send the info to the server. 
@@ -130,6 +127,14 @@ section {
     <label for ="username">Username:</label> <br>
     <input type="text" name ="username"> <br>
 
+<h2>Images</h2>
+<figure><img src="https..." alt="This should be a clear alternative text">
+  <figcaption>Photo by..</figcaption>
+</figure>
+    
+<p> Alt text is important for non-visual readers, About 140 characters. Figure tag allows us to add additional tags, such as figcaption for giving credits.
+  Decorative images that do not provide any additional information should receive empty alt text. THey will then not be added to the accessibility tree. If you do not define alt text, the screen reader will read the file name. Add a class to the image and then use CSS to style the image size.
+</p>
     
 <p>chickpeas</p>
 <h2>Pasta Salad</h2>
