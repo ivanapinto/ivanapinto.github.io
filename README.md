@@ -32,8 +32,18 @@ section {
 <title>How to make a website accessible</title>
     
     </head>
+    <nav>
+    <ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">Contact</a></li>
+    </ul>
+    </nav>
+    <p> Best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear that it is a lit with x items. The will know how long the list is and decide if they want to tab through the entire list.
 <body>
 <h1>Accessible Elements</h1>
+<p>The easiest way to create an accessible website is to start with semantic HTML tags. HTML by deafualt is accessible and semantic HTML tags will automatically populate the accessibility tree with the correct name, role, state and vaule without any additional work</p>
+<p>Start with a simple layout with landmark elements, where the navigation bar is at the top, followed by a main content area and a footer on the botton. Navigation elements are used as shortcuts for assistive technology users, so they can quickly jump to a specific section fo the page. It is very similar to how visual users will look at visual cues on a pake like a navigation bar, headings, etc.</p>
 
 <section>
 
@@ -56,10 +66,10 @@ section {
   
   <h4>Bad Example</h4>
  <div class="button">Not a Real Button</div>
- <p> This button is made from a DIV tag. Without additional programming, it would not be accessible for keyboard or screen readers users. It would not get focus when using keyboard and you also can't activate it with a space bar.</p>
+ <p> This button is made from a DIV tag. Without additional programming, it would not be accessible for keyboard or screen readers users. It would not get focus when using keyboard and you also can't activate it with a space bar.A DIV does not have any semantic meaning because its purspose is to proved a block level generid container.</p>
  <h4>Good Example</h4>
   <button class="button">Real Button</button>
-  <p></p>This is using BUTTON tag in HTML. It is operable by keyboard and the screen reader reads "Real Button button</p>
+  <p></p>This is using BUTTON tag in HTML. This button gets all the functionality out of the box. It is operable by keyboard and the screen reader reads "Real Button button</p>
 
 
 
