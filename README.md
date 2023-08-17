@@ -90,7 +90,7 @@ input[type='submit'] {
   text-transform: uppercase;
 }
 
-main {
+/* main {
   display: grid;
   grid-template-columns: minmax(410px, 2fr) 3fr;
   grid-template-rows: 50px 1fr;
@@ -99,7 +99,7 @@ main {
 
 main h1 {
   grid-column: 1 / -1;
-}
+} */
 
 aside p {
   max-width: 30rem;
@@ -155,7 +155,7 @@ nav .content {
     
     </head>
 
-      <h2> Navigation Bar test 3 </h2>
+      <h2> Navigation Bar test 4 </h2>
     <p> Best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of 3 items". They will know how long the list is and decide if they want to tab through the entire list. You can definitley style your navigation bar using CSS. </p>
     <nav>
       <a class="skip-link" href="#main">Skip to Main Content</a>
