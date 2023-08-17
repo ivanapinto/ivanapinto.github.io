@@ -155,11 +155,11 @@ nav .content {
     
     </head>
 
-      <h2> Navigation Bar test 2 </h2>
+      <h2> Navigation Bar test 3 </h2>
     <p> Best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of 3 items". They will know how long the list is and decide if they want to tab through the entire list. You can definitley style your navigation bar using CSS. </p>
     <nav>
       <a class="skip-link" href="#main">Skip to Main Content</a>
-  /* <div class="content"> */
+  <!-- <div class="content"> -->
     
     
     <ul>
@@ -167,12 +167,12 @@ nav .content {
     <li><a href="">About</a></li>
     <li><a href="">Contact</a></li>
     </ul>
-  /* </div> */
+   <!-- </div> -->
     </nav>
 <h2>Skip Link</h2>
     <p> Add a skip link for keyboard users. It is simple and improves their experience! It should be the first thing when tabbing on a web page and it allows users to directly skip to the main content of a web page and bypass blocks of content such as navigation or ads. Add an ANCHOR elemet inside of the NAV tag</p>
     
-    /* <main id="main" class="content"> */
+  <!-- <main id="main" class="content"> -->
       <main id="main">
     <h1>Accessible Landmarks</h1>
    
