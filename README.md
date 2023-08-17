@@ -2,31 +2,153 @@
 <html lang="en-us">
 <head>
 <style>
+:root {
+  --header-height: 75px;
+  --main: #2d2a2e;
+  --yellow: #ffd866;
+  --black: #111111;
+  --white: #fcfcfa;
+  --sans-serif: 'Open Sans', sans-serif;
+  --monospace: 'Hack', monospace;
+}
+
 body {
-  height: 100%;
-  width: 100%;
-}
-section {
-  padding: 24px;
-  min-height: 80vh;
-  border-bottom: 5px solid grey;
+  font-family: var(--sans-serif);
+  background: var(--white);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: minmax(min-content, var(--header-height)) auto minmax(min-content, var(--header-height));
+  justify-content: center;
 }
 
-.button {
-  display: inline-block;
-  background: tomato;
-  color: white;
-  padding: 18px;
-  font-size: 18px;
-  font-family: sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  font-family: var(--monospace);
+}
+
+nav {
+  background: var(--main);
+  font-size: 1.15rem;
+  color: var(--yellow);
+  display: flex;
+  padding: 1.5rem 0;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a,
+footer a {
+  color: var(--yellow);
+}
+
+footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 3rem 0;
+}
+
+form,
+form .input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input {
+  max-width: 25rem;
+  border: 2px solid var(--main);
+  border-radius: 4px;
+  line-height: 2rem;
+}
+
+input[type='submit'] {
+  width: min-content;
+  padding: 6px;
+  background: var(--yellow);
+  font-family: var(--monospace);
+  color: var(--main);
   font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  border: none;
+  text-transform: uppercase;
 }
 
-.button:active {
-  background: rebeccapurple;
+main {
+  display: grid;
+  grid-template-columns: minmax(410px, 2fr) 3fr;
+  grid-template-rows: 50px 1fr;
+  gap: 2rem;
+}
+
+main h1 {
+  grid-column: 1 / -1;
+}
+
+aside p {
+  max-width: 30rem;
+}
+
+#terms-content p {
+  max-width: 25rem;
+}
+
+/* *** Wrapper Styles *** */
+
+.content {
+  padding: 0 3rem;
+  max-width: 75em;
+}
+
+nav .content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* *** Informative vs Decorative Images *** */
+.pawprint {
+  width: 30px;
+  height: 30px;
+}
+
+.pug {
+  border-radius: 50%;
+  height: 125px;
+}
+
+/*  *** Browser Focus ***  */
+
+.skip-link {
+  position: absolute;
+  left: 50%;
+  transform: translateY(-200px);
+
+  /* Fancy Styles   */
+  padding: 8px;
+  background: var(--black);
+  transition: transform 0.3s;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 </style>
 <title>How to make a website accessible</title>
