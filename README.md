@@ -155,7 +155,7 @@ nav .content {
     
     </head>
 
-      <h2> Navigation Bar </h2>
+      <h2> Navigation Bar test </h2>
     <p> Best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of 3 items". They will know how long the list is and decide if they want to tab through the entire list. You can definitley style your navigation bar using CSS. </p>
     <nav>
       <a class="skip-link" href="#main">Skip to Main Content</a>
