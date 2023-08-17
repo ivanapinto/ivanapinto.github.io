@@ -56,10 +56,10 @@ section {
   
   <h4>Bad Example</h4>
  <div class="button">Not a Real Button</div>
- <p> This button is made from a DIV tag. Without additional programming, it would not be accessible for keyboard or screen readers users. It would not get focus when using keyboard and you also can't activate it with a space barusing a keyboard</p>
+ <p> This button is made from a DIV tag. Without additional programming, it would not be accessible for keyboard or screen readers users. It would not get focus when using keyboard and you also can't activate it with a space bar.</p>
  <h4>Good Example</h4>
   <button class="button">Real Button</button>
-  <This is using BUTTON tag in HTML>
+  <p></p>This is using BUTTON tag in HTML. It is operable by keyboard and the screen reader reads "Real Button button</p>
 
 
 
