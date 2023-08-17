@@ -272,7 +272,20 @@ nav .content {
 
     <h1>Keyboard focus</h1>
     <p>When tabbing, browser fucus should highlight interactive elements. The focus ring indicates to a visual keyboard user where they are on a web page. You can replace it with something more consistent with your branding using borders, text size and text decorations.<p>
-    
+
+    <h1>WAI-ARIA</h1>
+    <p> WAI-ARIA stands for the Web Accessibility Initiative, Accessible, Rich Internet Applications.
+It is a tool that gives a developer the power to directly modify the accessibility tree.</p>
+<h2>ARIA DESCRIBED BY</h2>
+Aria described by  uses a text content of an element to describe anothe element on the page. For example, it can be used to describe a label of a text field. When the screen reader describes a label, it will read a text input </p>
+
+<div class="input container">
+<label aria-describedby="name-description" for="name">Name</label>
+<input type="text" id="name" required>
+  <p id="name description">Please enter first and last name</p>
+</div>
+<p> the description "Please enter first and last name" is visually but not programatically associated with the input</p>
+
 <p>chickpeas</p>
 <h2>Pasta Salad</h2>
 <p>mozarella</p>
