@@ -71,7 +71,7 @@ section {
 
 <section>
   <h2>Form</h2> 
-  <p></p>The FORM tag creates a container for various input elements like text fields, checkboxes, radio buttons, and buttons. Each element shoudl have input and label </p>
+  <p>The FORM tag creates a container for various input elements like text fields, checkboxes, radio buttons, and buttons. Each element shoudl have input and label </p>
   <form action="">
 <label for="name">Name</label>
 <input type="text" id="name" required>
@@ -84,7 +84,7 @@ section {
     <label>
     <input type="checkbox">
     I accept all the <a href="#terms">terms and conditions</a>
-    <label>
+    </label>
    <input type="submit" value="Sign Up">
     
   </form>
