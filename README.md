@@ -32,6 +32,11 @@ section {
 <title>How to make a website accessible</title>
     
     </head>
+    <body>
+    <h1>Accessible Landmarks</h1>
+   
+    <h2> Navigation Bar </h2>
+    <p> Best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of 3 items". They will know how long the list is and decide if they want to tab through the entire list. </p>
     <nav>
     <ul>
     <li><a href="">Home</a></li>
@@ -39,8 +44,27 @@ section {
     <li><a href="">Contact</a></li>
     </ul>
     </nav>
-    <p> Best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear that it is a lit with x items. The will know how long the list is and decide if they want to tab through the entire list.
-<body>
+<h2>Main Body of the page</h2>
+<p> The MAIN tag tells screen readers where the main tag of the web page begins.</p>
+
+<h2> Footer</h2>
+<p> User the FOOTER element for secondary information, such as copyright</p>
+
+<h2>Heading</h2>
+<p>Most of the screen reader users will first look at a page heading structure in order to get a feeling for the page. Similar to how people use the table of contents in a book rather than scanning the entire book.</p>
+<br> It is important that we do not skip headings or use headings for aestethic reasons becuase the headings level describes the struction of the page.
+<h3>Examples</h3>
+  
+  <bold>Bad Example</bold>
+  <p>This is styled to look like a heading</p>
+    <h4>Good Example</h4>
+    <p>This is H4 heading and the screen reader will read</p>
+<h2> Section</h2>
+<p> add text here</p>
+
+    <h2> Secondary Content</h2>
+    <p>Use the ASIDE tag for secondary content, anything that is not part of the main subject </p>
+
 <h1>Accessible Elements</h1>
 <p>The easiest way to create an accessible website is to start with semantic HTML tags. HTML by deafualt is accessible and semantic HTML tags will automatically populate the accessibility tree with the correct name, role, state and vaule without any additional work</p>
 <p>Start with a simple layout with landmark elements, where the navigation bar is at the top, followed by a main content area and a footer on the botton. Navigation elements are used as shortcuts for assistive technology users, so they can quickly jump to a specific section fo the page. It is very similar to how visual users will look at visual cues on a pake like a navigation bar, headings, etc.</p>
