@@ -44,12 +44,12 @@ section {
 
   <span>Fake Label</span>
   <input type="text">
-  <p>This label is just a SPAN tag that isn't associated with the input. Check the accessibility tree and you will see that there is no name associated with the input. </p>
+  <p>This label is just a SPAN tag that isn't associated with the input. Check the accessibility tree and you will see that there is no name associated with the input. The screen reader will just read "edit blank" </p>
   
   <h4>Good Example</h4>
   <label for="text-input">Real Label</label>
   <input type="text" id="text-input">
-  <p>This label is associated with the actual LABEL tag</p>
+  <p>This label is associated with the actual LABEL tag. The screen readed will read "Real label edit blank"</p>
   
   <h2>Button</h2> 
   <h3>Examples</h3>
