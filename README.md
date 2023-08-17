@@ -287,6 +287,11 @@ Aria described by  uses a text content of an element to describe anothe element 
         </div>
 <p> the description "Please enter first and last name" is visually but not programatically associated with the input</p>
 
+<button aria-describedby="trash-desc">Move to trash</button>
+<p id="trash-desc">
+  Items in the trash will be permanently removed after 30 days.
+</p>
+---
 <p>chickpeas</p>
 <h2>Pasta Salad</h2>
 <p>mozarella</p>
