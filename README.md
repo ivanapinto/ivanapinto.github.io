@@ -155,19 +155,27 @@ nav .content {
     
     </head>
     <body>
-    <h1>Accessible Landmarks</h1>
-   
-    <h2> Navigation Bar </h2>
-    <p> Best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of 3 items". They will know how long the list is and decide if they want to tab through the entire list. </p>
+      <h2> Navigation Bar </h2>
+    <p> Best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of 3 items". They will know how long the list is and decide if they want to tab through the entire list. You can definitley style your navigation bar using CSS. </p>
     <nav>
+    <a href="#main">Skip to main content </a>
+    <div class="content">
     <ul>
     <li><a href="">Home</a></li>
     <li><a href="">About</a></li>
     <li><a href="">Contact</a></li>
     </ul>
     </nav>
-<h2>Main Body of the page</h2>
-<p> The MAIN tag tells screen readers where the main tag of the web page begins.</p>
+<h2>Skip Link</h2>
+    <p> Add a skip link for keyboard users. It is simple and improves their experience! It should be the first thing when tabbing on a web page and it allows users to directly skip to the main content of a web page and bypass blocks of content such as navigation or ads. Add an ANCHOR elemet inside of the NAV tag</p>
+    
+    <main id="main" class="content">
+    <h1>Accessible Landmarks</h1>
+   
+  
+    
+<h2> Body of the page</h2>
+<p> The  tag tells screen readers where the  tag of the web page begins.</p>
 
 <h2> Footer</h2>
 <p> User the FOOTER element for secondary information, such as copyright</p>
@@ -185,11 +193,11 @@ nav .content {
 <p> add text here</p>
 
     <h2> Secondary Content</h2>
-    <p>Use the ASIDE tag for secondary content, anything that is not part of the main subject </p>
+    <p>Use the ASIDE tag for secondary content, anything that is not part of the  subject </p>
 
 <h1>Accessible Elements</h1>
 <p>The easiest way to create an accessible website is to start with semantic HTML tags. HTML by deafualt is accessible and semantic HTML tags will automatically populate the accessibility tree with the correct name, role, state and vaule without any additional work</p>
-<p>Start with a simple layout with landmark elements, where the navigation bar is at the top, followed by a main content area and a footer on the botton. Navigation elements are used as shortcuts for assistive technology users, so they can quickly jump to a specific section fo the page. It is very similar to how visual users will look at visual cues on a pake like a navigation bar, headings, etc.</p>
+<p>Start with a simple layout with landmark elements, where the navigation bar is at the top, followed by a  content area and a footer on the botton. Navigation elements are used as shortcuts for assistive technology users, so they can quickly jump to a specific section fo the page. It is very similar to how visual users will look at visual cues on a pake like a navigation bar, headings, etc.</p>
 
 <section>
   <h2>Form</h2> 
@@ -257,6 +265,9 @@ nav .content {
 <p> Alt text is important for non-visual readers, About 140 characters. Figure tag allows us to add additional tags, such as figcaption for giving credits.
   Decorative images that do not provide any additional information should receive empty alt text. THey will then not be added to the accessibility tree. If you do not define alt text, the screen reader will read the file name. Add a class to the image and then use CSS to style the image size.
 </p>
+
+    <h1>Keyboard focus</h1>
+    <p>When tabbing, browser fucus should highlight interactive elements. The focus ring indicates to a visual keyboard user where they are on a web page. You can replace it with something more consistent with your branding using borders, text size and text decorations.<p>
     
 <p>chickpeas</p>
 <h2>Pasta Salad</h2>
@@ -316,4 +327,6 @@ nav .content {
     <option value="chocolate">Chocolate</option>
     <option value="ice Cream">Ice Cream</option></select>
 </form>
+</main>
+</body>
 </html>
