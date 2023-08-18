@@ -156,6 +156,20 @@ nav a[aria-current='true'] {
   color: white;
   text-decoration: underline;
 }
+
+/* *** Focus and hover style of the navigation *** */
+nav a:focus,
+nav a:hover {
+  color: lightgrey;
+  text-decoration: underline;
+}
+
+/* *** Cursor pointer for checkbox and submit *** */
+input[type='checkbox'],
+input[type='submit'] {
+  cursor: pointer;
+}
+
 </style>
 <title>How to make a website accessible</title>
     
