@@ -303,6 +303,47 @@ Aria described by  uses a text content of an element to describe anothe element 
 <p id="trash-desc">
   Items in the trash will be permanently removed after 30 days.
 </p>
+
+<h2>Dynamic Content - ARIA-LIVE</h2>
+<P> when content updates dynamically without the entire page reloading, the screen reader will not usually read it. This is often used in chat rooms, games, shopping carts, etc. Aria-live will help screen readers read the updated content. Updates can be announced only if the user is idle (polite) or as soon as possible (assertive)
+  <p> here is an example from Mozilla <p>
+        <section aria-live="assertive" aria-atomic="true">
+      <h1>Random quote</h1>
+      <blockquote>
+        <p></p>
+      </blockquote>
+    </section>
+    <script>
+    const quotePara = document.querySelector('section p');
+
+    let quoteJson;
+
+    getQuotes('quotes.json', populateJson);
+
+    let intervalID = window.setInterval(showQuote, 10000);
+
+    function getQuotes(url, callback) {
+      let request = new XMLHttpRequest();
+      request.open('GET', url);
+      request.responseType = 'json';
+      request.send();
+
+      request.onreadystatechange = function() {
+        if (request.readyState === 4 && request.status === 200) {
+          callback(request.response);
+        }
+      };
+    }
+
+    function populateJson(response) {
+      quoteJson = response;
+    }
+
+    function showQuote() {
+      let random = Math.floor((Math.random()*25));
+      quotePara.textContent = quoteJson[random].quote + ' -- ' + quoteJson[random].author;
+    }
+    </script>
 ---
 <p>chickpeas</p>
 <h2>Pasta Salad</h2>
