@@ -276,16 +276,28 @@ nav .content {
     <h1>WAI-ARIA</h1>
     <p> WAI-ARIA stands for the Web Accessibility Initiative, Accessible, Rich Internet Applications.
 It is a tool that gives a developer the power to directly modify the accessibility tree.</p>
+
+<h2> ROLE and ARIA-LABEL on Search button</h2>
+<p></p>The search button below is using FROM and input type "search". The screen reader will announce "Search query, insertion at beginning of text".</p>
+  <form>
+          <input type="search" name="q" placeholder="Search query">
+          <input type="submit" value="Go!">
+        </form>
+
+<p>The search form is a very important feature but it is not listed under the screenreader landmars. Here is how you can improve it using ARIA features. I have added role="search". The search form will now be called out as a separate item, when browsing thru the page and when browsing by landmarks. </p>
+  <form role="search">
+          <input type="search" name="q" placeholder="Search query">
+          <input type="submit" value="Go!">
+        </form>
+
+<p> I have also added aria-label attribute aria-label="Search through my page" that will be read out when the form input is highlighted</p>
+ <form role="search">
+          <input type="search" name="q" placeholder="Search query" aria-label="Search through my page">
+          <input type="submit" value="Go!">
+        </form>
+
 <h2>ARIA DESCRIBED BY</h2>
-Aria described by  uses a text content of an element to describe anothe element on the page. For example, it can be used to describe a label of a text field. When the screen reader describes a label, it will read a text input </p>
-
-
- <div class="input-container">
-          <label for="name" aria-describedby="name-description">Name</label>
-          <input type="text" id="name" required>
-          <p id="name-description">Please enter first and last name</p>
-        </div>
-<p> the description "Please enter first and last name" is visually but not programatically associated with the input</p>
+Aria described by  uses a text content of an element to describe anothe element on the page. For example, it can be used to describe a label of a button. When the screen reader describes a label, it will read a text input </p>
 
 <button aria-describedby="trash-desc">Move to trash</button>
 <p id="trash-desc">
