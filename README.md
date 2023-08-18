@@ -278,13 +278,13 @@ nav .content {
 It is a tool that gives a developer the power to directly modify the accessibility tree.</p>
 
 <h2> ROLE and ARIA-LABEL on Search button</h2>
-<p></p>The search button below is using FROM and input type "search". The screen reader will announce "Search query, insertion at beginning of text".</p>
+<p></p>The search button below is using FROM and input type "search". The screen reader will announce "Search query".</p>
   <form>
           <input type="search" name="q" placeholder="Search query">
           <input type="submit" value="Go!">
         </form>
 
-<p>The search form is a very important feature but it is not listed under the screenreader landmars. Here is how you can improve it using ARIA features. I have added role="search". The search form will now be called out as a separate item, when browsing thru the page and when browsing by landmarks. </p>
+<p>The search form is a very important feature but it is not listed under the screenreader landmars. Here is how you can improve it using ARIA features. I have added role="search". The search form will now be called out as a separate item, when browsing thru the page and when browsing by landmarks. Remember that screen reader users will often navigate via landmarks. </p>
   <form role="search">
           <input type="search" name="q" placeholder="Search query">
           <input type="submit" value="Go!">
