@@ -150,6 +150,12 @@ nav .content {
 .skip-link:focus {
   transform: translateY(0);
 }
+
+/*  *** Styling for current tab, using aria-current attribute ***  */
+nav a[aria-current='true'] {
+  color: white;
+  text-decoration: underline;
+}
 </style>
 <title>How to make a website accessible</title>
     
@@ -163,13 +169,14 @@ nav .content {
     
     
     <ul>
-    <li><a href="">Home</a></li>
+    <li><a href="#home" aria-current="true">Home</a></li>
     <li><a href="">About</a></li>
     <li><a href="">Contact</a></li>
     </ul>
    <!-- </div> -->
     </nav>
 <h2>Skip Link</h2>
+<p> Using aria-current to tell the screen reader that we are currently on this page. This can also be used for date pickers to show the current date. We can also use CSS for visual users. </p>
     <p> Add a skip link for keyboard users. It is simple and improves their experience! It should be the first thing when tabbing on a web page and it allows users to directly skip to the main content of a web page and bypass blocks of content such as navigation or ads. Add an ANCHOR elemet inside of the NAV tag</p>
     
   <!-- <main id="main" class="content"> -->
@@ -344,6 +351,9 @@ Aria described by  uses a text content of an element to describe anothe element 
       quotePara.textContent = quoteJson[random].quote + ' -- ' + quoteJson[random].author;
     }
     </script>
+
+    <h2>Keyboard accessiblity</h2>
+    <p> HTML has a built-in keyboard accessibility. When working wtih non-semantic elemtns, ARIA can help to provide missing semantics
 ---
 <p>chickpeas</p>
 <h2>Pasta Salad</h2>
