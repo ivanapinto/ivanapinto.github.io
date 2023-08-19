@@ -170,6 +170,52 @@ input[type='submit'] {
   cursor: pointer;
 }
 
+/* *** Custom Component *** */
+#terms-content {
+  display: none;
+}
+
+#terms-button {
+  margin: 0;
+  padding: 0;
+  margin-top: 1em;
+  font-weight: bold;
+  border: thin solid transparent;
+  background-color: transparent;
+  padding-left: 0.125em;
+  text-align: left;
+  cursor: pointer;
+}
+
+#terms-button:focus,
+#terms-button:hover {
+  background-color: #eee;
+  text-decoration: underline;
+}
+
+#terms-button:active {
+  background-color: #bbb;
+  border: 1px dashed #bbb;
+}
+
+#terms-button h2 {
+  display: inline;
+}
+
+#terms-button[aria-expanded='false']::before {
+  display: inline-block;
+  position: relative;
+  content: '🦴';
+  transform: rotate(135deg);
+}
+
+#terms-button[aria-expanded='true']::before {
+  display: inline-block;
+  position: relative;
+  content: '🦴';
+  transform: rotate(45deg);
+}
+
 </style>
 <title>How to make a website accessible</title>
     
@@ -236,17 +282,31 @@ input[type='submit'] {
 <input type="email" id="email" required>
 <p> When using the email type, browser will validat that the value is email. It also allows auto-completion which is very helpful, especially for people that have motor impairments. </p>
 
-    <label>
-    <input type="checkbox">
-    I accept all the <a href="#terms">terms and conditions</a>
-    </label>
-   <input type="submit" value="Sign Up">
-    
-  </form>
-  </section>
-  <section id="terms">
-    <h2>Terms and Conditions</h2>
-    <p> Here are my tertns</p>
+      <label>
+          <input type="checkbox">
+          I accept all the <a href="#terms">terms and conditions</a>
+        </label>
+
+        <input type="submit" value="Sign Up">
+      </form>
+    </section>
+    <section id="terms">
+      <button id="terms-button" aria-expanded="false" aria-controls="terms-content">
+        <h2>Terms and Conditions</h2>
+      </button>
+      <div id="terms-content">
+        <p>Clouds are free they come and go as they please. Let's build some happy little clouds up here. The first step
+          to doing anything is to believe you can do it. See it finished in your mind before you ever start. Let's put
+          some happy little clouds in our world. Even trees need a friend. We all need friends. There comes a nice
+          little fluffer.</p>
+        <p>We tell people sometimes: we're like drug dealers, come into town and get everybody absolutely addicted to
+          painting. It doesn't take much to get you addicted. We have all at one time or another mixed some mud. This is
+          your world, whatever makes you happy you can put in it. Go crazy. Let's put some highlights on these little
+          trees. The sun wouldn't forget them. Nice little clouds playing around in the sky.</p>
+        <p>If you've been in Alaska less than a year you're a Cheechako. Every day I learn. We can fix anything. We have
+          no limits to our world. We're only limited by our imagination.</p>
+      </div>
+   
   </section>
   <h2>Checkbox Input</h2> 
   <h3>Examples</h3>
@@ -296,7 +356,7 @@ input[type='submit'] {
 
     <h1>WAI-ARIA</h1>
     <p> WAI-ARIA stands for the Web Accessibility Initiative, Accessible, Rich Internet Applications.
-It is a tool that gives a developer the power to directly modify the accessibility tree.</p>
+It is a tool that gives a developer the power to directly modify the accessibility tree. Aria does not add any functionality or style to the element. It modifies the accessibility tree so the element's functionality is correctly described to an assistive technology user.</p>
 
 <h2> ROLE and ARIA-LABEL on Search button</h2>
 <p></p>The search button below is using FROM and input type "search". The screen reader will announce "Search query".</p>
