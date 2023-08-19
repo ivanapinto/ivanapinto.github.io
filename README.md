@@ -311,6 +311,24 @@ termsButton.addEventListener('keydown', handleKeydown);
     
     </head>
 
+    <a class="skip-link" href="#main">Skip to Main Content</a>
+  <!-- <div class="content"> -->
+
+<div class="sidebar"
+    <nav>
+      
+    <ul>
+    <li><a href="#home" aria-current="true">Home</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">Contact</a></li>
+    </ul>
+   <!-- </div> -->
+    </nav>
+</div>
+
+<div class="body-text">
+  
+
       <h2> Navigation Bar test 4 </h2>
     <p> Best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of 3 items". They will know how long the list is and decide if they want to tab through the entire list. You can definitley style your navigation bar using CSS. </p>
     <nav>
