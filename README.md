@@ -2,6 +2,36 @@
 <html lang="en-us">
 <head>
 <style>
+
+ .sidebar {
+height: 100%;
+width: 150px;
+position: absolute;
+left: 0;
+top: 0;
+padding-top: 40px;
+background-color: lightblue;
+}
+
+.sidebar a {
+padding: 8px;
+font-size: 24px;
+display: block;
+text-decoration: none;
+}
+
+.sidebar a:hover {
+cursor: pointer;
+opacity: .7;
+}
+
+.body-text {
+margin-left: 150px;
+font-size: 18px;
+}
+
+/*
+----
 :root {
   --header-height: 75px;
   --main: #2d2a2e;
@@ -215,7 +245,7 @@ input[type='submit'] {
   content: '🦴';
   transform: rotate(45deg);
 }
-
+*/
 </style>
 
 <script>
