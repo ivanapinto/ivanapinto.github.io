@@ -218,7 +218,7 @@ footer {
         
        <h3>Form</h3> 
   <p>The FORM tag creates a container for various input elements like text fields, checkboxes, radio buttons, and buttons. Each element shoudl have input and label </p>
-  <form action="">
+  <form>
 <label for="name">Name</label>
 <input type="text" id="name" required>
 <p>for and id establishes the programatic relationship. User can click either direclty in the field or on the label and both will focus the input. You can also give it a required attribute and the browser will incude a built in warning when you try to submit </p>
@@ -259,8 +259,7 @@ footer {
     <input type="number" name="age" />
     <input type ="email" name = "email" />
     <input type ="file" name = "file" />
-    <!--This may not be correct-->
-    <textareaname="multiline" rows="5" ></textareaname> <br>
+   
     <!--drop-down list-->
     <select name="food">
     <option value="chocolate">Chocolate</option>
