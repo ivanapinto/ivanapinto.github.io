@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
@@ -6,7 +6,7 @@
 
     <title>How to make a website accessible</title>
     <style>
-    html, body {
+  html, body {
   margin: 0;
   padding: 0;
 }
