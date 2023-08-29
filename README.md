@@ -21,7 +21,7 @@ body {
   margin: 0 auto;
 }
 
-/* || typography */
+/*  typography */
 
 h1, h2, h3, h4 {
   font-family: Calibri, Arial;
@@ -58,7 +58,7 @@ p, li, br {
   line-height: 1.5;
 }
 
-/* || header layout */
+/* header layout */
 
 header {
   margin-bottom: 10px;
@@ -146,7 +146,7 @@ footer {
   margin-top: 10px;
 }
 </style>
-  </head>
+</head>
 
   <body>
     <!-- Here is our main header that is used accross all the pages of our website -->
@@ -341,9 +341,16 @@ footer {
     <h2>WAI-ARIA</h2>
     <p> WAI-ARIA stands for the Web Accessibility Initiative, Accessible, Rich Internet Applications.
 It is a tool that gives a developer the power to directly modify the accessibility tree. Aria does not add any functionality or style to the element. It modifies the accessibility tree so the element's functionality is correctly described to an assistive technology user.</p>
+      <p> Three main ARIA features:
+  <ul>
+          <li>Roles- define what the element is. any of these are landmark roles, duplicating the semantic elements. Example: role="navigation" (NAV), role="complementary (ASIDE), role="search", role="tablist", role="tabpanel"</li>
+        <li>Properties - give properties to elements. Example: aria-required="true", aria-labelledby="label"</li>
+    <li>States - define current conditions of elements. Example: aria-disabled="true" - tells to the screen reader that the form input is currently disabled</li>
+        </ul> </p>
+    <p> Below are the main arias where ARIA is very useful </p>
 
-<h3> ROLE and ARIA-LABEL on Search button</h3>
-<p></p>The search button below is using FROM and input type "search". The screen reader will announce "Search query".</p>
+<h3> Landmarks</h3>
+<p>The search button below is using FORM and input type "search". The screen reader will announce "Search query".</p>
   <form>
           <input type="search" name="q" placeholder="Search query">
           <input type="submit" value="Go!">
@@ -362,7 +369,7 @@ It is a tool that gives a developer the power to directly modify the accessibili
         </form>
 
 <h3>ARIA DESCRIBED BY</h3>
-Aria described by  uses a text content of an element to describe anothe element on the page. For example, it can be used to describe a label of a button. When the screen reader describes a label, it will read a text input </p>
+<p>Aria described by  uses a text content of an element to describe anothe element on the page. For example, it can be used to describe a label of a button. When the screen reader describes a label, it will read a text input </p>
 
 <button aria-describedby="trash-desc">Move to trash</button>
 <p id="trash-desc">
@@ -370,10 +377,33 @@ Aria described by  uses a text content of an element to describe anothe element 
 </p>
 
 <h3>Dynamic Content - ARIA-LIVE</h3>
-<P> when content updates dynamically without the entire page reloading, the screen reader will not usually read it. This is often used in chat rooms, games, shopping carts, etc. Aria-live will help screen readers read the updated content. Updates can be announced only if the user is idle (polite) or as soon as possible (assertive)
+<P> When content updates dynamically without the entire page reloading, the screen reader will not usually read it. This is often used in chat rooms, games, shopping carts, etc. Aria-live property will help screen readers read the updated content. Updates can be announced only if the user is idle (aria-live="polite") or as soon as possible (aria-live="assertive")
   <p> Add example <p>
         
+    
+ <h3>Keyboard Accessibility - TABINDEX</h3>
+    <p>Native HTML elements have a built-in keyboard accessibility for buttons, form controls, links, etc. When working with a code that uses non-semantic elements, you can use tabindex to make code focusable. 
+      <br> tabindex="0" allows elements that are not normally tabbable to become tabbable. </br> </p>
 
+<h3>From Validation and Errors</h3>
+<h4>ARIA-REQUIRED="true"</h4>
+<P> This is used for screen readers to tell users that form inputs need to be filled in. The required attribut in HTML works with most screen readers and so there is no need to include both, required and aria-required.</p>
+<h4>ROLE="ALERT"</h4>
+<p>This automatically turns the element into a live region, so changes to it are read out</p>
+<h4>ARIA-RELEVANT="ALL"<h4>
+  <P>This tells the screen reader to read out the contents of the error list when any changes are made to it </p>
+  <h4>ARIA-LABEL ARIA-LABELLEDBY and ARIA-DESCRIBEDBY</h4>
+  <p>Always include a LABEL FOR element for every input. It is a preferred method but can be substituted with 
+    <ul>
+      <li> ARIA-LABEL - can be used when we do not want the label to be visible. Good example is a text input next to the Search button.</li>
+      <li> ARIA-LABELLEDBY - you can designate another id attribute as a label. One element can label multiple form controls. </li>
+      <li> ARIA-DESCRIBEDBY - you can associate other descriptive info with the form input. Screen readers will read the label and then the description.
+      <br>
+      <label for="resetpass">Reset Password:</label>
+<input type="password" id="resetpass" aria-describedby="pwnote"><br>
+        <span id="pwnote">New password must be 8-15 characters and include letters and numbers.</span> </br> </li>
+      
+      </p>
       </article>
 
       <!-- the aside content can also be nested within the main content -->
@@ -398,4 +428,5 @@ Aria described by  uses a text content of an element to describe anothe element 
     </footer>
 
   </body>
-</html>
+</html> 
+      
