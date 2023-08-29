@@ -1,74 +1,222 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-	  
+    <meta name="viewport" content="width=device-width">
+
     <title>How to make a website accessible</title>
-    
-  <!-- look at the styling in a11ycopy. -->
+    <style>
+    html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  background-color: #6B8787;
+}
+
+body {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* || typography */
+
+h1, h2, h3, h4 {
+  font-family: Calibri, Arial;
+  color: #2a2a2a;
+}
+
+p, input, li {
+  font-family: Calibri, Arial;
+  color: #2a2a2a;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p, li, br {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* || header layout */
+
+header {
+  margin-bottom: 10px;
+}
+
+nav, article, aside, footer {
+  background-color: white;
+  padding: 1%;
+}
+
+nav {
+  height: 50px;
+  background-color: ff80ff;
+  display: flex;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2em;
+}
+
+input {
+  font-size: 1.6rem;
+  height: 32px;
+}
+
+input[type="search"] {
+  flex: 3;
+} 
+
+input[type="submit"] {
+  flex: 1;
+  margin-left: 1rem;
+  background: #333;
+  border: 0;
+  color: white; 
+} 
+
+
+/*  main layout */
+
+main {
+  display: flex;
+}
+
+article {
+  flex: 4;
+}
+
+aside {
+  flex: 1;
+  margin-left: 10px;
+  background-color: #D6F4F4 ;
+}
+
+aside li {
+  padding-bottom: 10px;
+}
+
+footer {
+  margin-top: 10px;
+}
+</style>
   </head>
-<body>
-    <!-- main header that is used across all the pages of our website -->
+
+  <body>
+    <!-- Here is our main header that is used accross all the pages of our website -->
 
     <header>
       <h1>How to make a website accessible</h1>
+
+      <!-- Even is it's not mandatory, it's common practice to put the main navigation menu within the main header -->
+
+      <nav>
+        <ul>
+          <li><a href="#">Layout</a></li>
+          <li><a href="#">Elements</a></li>
+          <li><a href="#">Keyboard</a></li>
+          <li><a href="#">ARIA</a></li>
+        </ul>
+
+        <!-- A Search form is another common non-linear way to navigate through a website. -->
+
+        <form>
+          <input type="search" name="q" placeholder="Search query">
+          <input type="submit" value="Go!">
+        </form>
+      </nav>
     </header>
-<nav>
-	 <!-- Add styling for current tab; add skip link. -->
-	 <!-- Add navigation into the side bar. -->
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our team</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
 
-  <!-- Search form  to navigate through a website. -->
-  <form>
-        <input type="search" name="q" placeholder="Search query">
-        <input type="submit" value="Go!">
-      </form>
-    </nav>
-
-    <!-- Here is my main content -->
+    <!-- Here is our page's main content -->
     <main>
-<h2> Accessible Page Layout </h2>
-<p>The easiest way to create an accessible website is to start with semantic HTML tags for landmarks. HTML by deafualt is accessible and semantic HTML tags will automatically populate the accessibility tree with the correct name, role, state and vaule without any additional work</p>
+
+      <!-- It contains an article -->
+      <article>
+        <h2>Accessible Page Layout </h2>
+
+      <p>The easiest way to create an accessible website is to start with semantic HTML tags for landmarks. HTML by deafualt is accessible and semantic HTML tags will automatically populate the accessibility tree with the correct name, role, state and vaule without any additional work</p>
 <p>Start with a simple layout with landmark elements, where the navigation bar is at the top, followed by a  content area and a footer on the botton. Navigation elements are used as shortcuts for assistive technology users, so they can quickly jump to a specific section fo the page. It is very similar to how visual users will look at visual cues on a pake like a navigation bar, headings, etc.</p>
 
- <h3> Navigation Bar </h3>
-    <p> The best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of x items". They will know how long the list is and decide if they want to tab through the entire list. You can definitley style your navigation bar using CSS. </p>
+        <h3>Navigation Bar</h3>
+
+       <p> The best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of x items". They will know how long the list is and decide if they want to tab through the entire list. You can definitley style your navigation bar using CSS. </p>
+        <p> Using aria-current to tell the screen reader that we are currently on this page. This can also be used for date pickers to show the current date. We can also use CSS for visual users. </p>
    
-<h4>Skip Link</h4>
-<p> Using aria-current to tell the screen reader that we are currently on this page. This can also be used for date pickers to show the current date. We can also use CSS for visual users. </p>
+       <h3>Skip Link</h3>
+
 <p> Add a skip link for keyboard users. It is simple and improves their experience. It should be the first thing when tabbing on a web page and it allows users to directly skip to the main content of a web page and bypass blocks of content such as navigation or ads. Add an ANCHOR elemet inside of the NAV tag</p>
       
 <h3> Main Content</h3>
 <p> xxxxx.</p>
-
-<h3> Footer</h3>
+        
+        
+        <h3> Footer</h3>
 <p> User the FOOTER element for secondary information, such as copyright</p>
 
 <h3>Headings</h3>
 <p>Most of the screen reader users will first look at a page heading structure in order to get a feeling for the page. Similar to how people use the table of contents in a book rather than scanning the entire book.</p>
-<br> It is important that we do not skip headings or use headings for aestethic reasons becuase the headings level describes the struction of the page.
-<h4>Examples</h4>
-  
-  <bold>Bad Example</bold>
+<p> It is important that we do not skip headings or use headings for aestethic reasons becuase the headings level describes the struction of the page.</p>
+      
+  <h4>Bad Example - need to style WIP</h4>
   <p>This is styled to look like a heading</p>
-    <h5>Good Example</h5>
-    <p>This is H5 heading and the screen reader will read</p>
+    <h4>Good Example</h4>
+    <p>This is H4 heading and the screen reader will read</p>
     
 <h3> Section</h3>
 <p> add text here</p>
 
 <h3> Secondary Content</h3>
     <p>Use the ASIDE tag for secondary content, anything that is not part of the  subject </p>
-
-<h2>Accessible Interactive Elements</h2>
-
-  <h3>Form</h3> 
+        
+    <h2>Accessible Interactive Elements</h2>    
+        
+       <h3>Form</h3> 
   <p>The FORM tag creates a container for various input elements like text fields, checkboxes, radio buttons, and buttons. Each element shoudl have input and label </p>
   <form action="">
 <label for="name">Name</label>
@@ -153,9 +301,8 @@
  <h5>Good Example</h5>
   <button class="button">Real Button</button>
   <p></p>This is using BUTTON tag in HTML. This button gets all the functionality out of the box. It is operable by keyboard and the screen reader reads "Real Button button</p>
-
-
-<h3>Images</h3>
+      
+      <h3>Images</h3>
 <figure><img src="https..." alt="This should be a clear alternative text">
   <figcaption>Photo by..</figcaption>
 </figure>
@@ -185,7 +332,8 @@
         <td>$12</td>
     </tr>
 </table>
- <h2>Keyboard accessiblity</h2>
+      
+       <h2>Keyboard accessiblity</h2>
     <p> HTML has a built-in keyboard accessibility. When working wtih non-semantic elemtns, ARIA can help to provide missing semantics
     <h3>Keyboard focus</h3>
     <p>When tabbing, browser fucus should highlight interactive elements. The focus ring indicates to a visual keyboard user where they are on a web page. You can replace it with something more consistent with your branding using borders, text size and text decorations.<p>
@@ -225,10 +373,14 @@ Aria described by  uses a text content of an element to describe anothe element 
 <P> when content updates dynamically without the entire page reloading, the screen reader will not usually read it. This is often used in chat rooms, games, shopping carts, etc. Aria-live will help screen readers read the updated content. Updates can be announced only if the user is idle (polite) or as soon as possible (assertive)
   <p> Add example <p>
         
-   <!-- aside content  nested within the main content -->
+
+      </article>
+
+      <!-- the aside content can also be nested within the main content -->
       <aside>
-      <h2> References </h2>
-     <ul>
+        <h2>References</h2>
+
+        <ul>
           <li><a href="#">Reference</a></li>
           <li><a href="#">Reference</a></li>
           <li><a href="#">Reference</a></li>
@@ -236,11 +388,13 @@ Aria described by  uses a text content of an element to describe anothe element 
           <li><a href="#">Reference</a></li>
         </ul>
       </aside>
-       </main>
-       
-       <!-- footer that is used across all the pages of our website -->
+
+    </main>
+
+    <!-- And here is our main footer that is used across all the pages of our website -->
+
     <footer>
-      <p>©Copyright Ivana. All rights reversed.</p>
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
 
   </body>
