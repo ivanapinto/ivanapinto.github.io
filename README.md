@@ -403,6 +403,21 @@ It is a tool that gives a developer the power to directly modify the accessibili
         <span id="pwnote">New password must be 8-15 characters and include letters and numbers.</span> </br> </li>
       
       </p>
+
+      <h3> Making Non-semantic Buttons Accessible </h3>
+<p> Whenever possible, it is recommended to use native HTML button.  It is supported by assistive technology and provides keyboard and focus requirements by default.</p>
+<p> Here is what you need to do if a non-semantic elements, such as DIV, was used to mark up a button </P>
+<h4> Building keyboard focus back in </h4>
+<p> Use tabindex="0" so the button is tabbable. </p>
+<h4> Building keyboard accessibility back in </h4>
+<p> Use JS to activate the button via the Enter/Return key. </p> 
+<h4> Building button styling back in </h4>
+<p> Use CSS to style the button so it looks like a button </p>
+<h4> Building support for screen readers back in </h4>
+<p> Use role="button" so screen reader users know they are interacting with button </p>
+<h4> Building text labels back in </h4>
+<p>
+
       </article>
 
       <!-- the aside content can also be nested within the main content -->
