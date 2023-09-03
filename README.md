@@ -384,7 +384,7 @@ It is a tool that gives a developer the power to directly modify the accessibili
     <p>Native HTML elements have a built-in keyboard accessibility for buttons, form controls, links, etc. When working with a code that uses non-semantic elements, you can use tabindex to make code focusable. 
       <br> tabindex="0" allows elements that are not normally tabbable to become tabbable. </br> </p>
 
-<h3>From Validation and Errors</h3>
+<h3>Form Validation and Errors</h3>
 <h4>ARIA-REQUIRED="true"</h4>
 <P> This is used for screen readers to tell users that form inputs need to be filled in. The required attribut in HTML works with most screen readers and so there is no need to include both, required and aria-required.</p>
 <h4>ROLE="ALERT"</h4>
