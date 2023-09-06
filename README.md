@@ -437,6 +437,21 @@ It is a tool that gives a developer the power to directly modify the accessibili
 <h4> Building text labels back in </h4>
 <p>
 
+<script>
+        var h1 = document.createElement('h1');
+        h1.innerText = "JS Example - Type into the input to make this text change";
+
+        var input = document.createElement('input');
+        input.setAttribute('type', 'text');
+
+        input.addEventListener('input', function() {
+            h1.innerText = "JS Example - " + input.value;
+        });
+
+        document.body.appendChild(h1);
+        document.body.appendChild(input);
+    </script>
+
       </article>
 
       <!-- the aside content can also be nested within the main content -->
