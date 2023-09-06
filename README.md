@@ -146,7 +146,26 @@ footer {
   margin-top: 10px;
 }
 </style>
-</head>
+
+ 
+   <script>
+     var h1 = document.createElement('h1')
+h1.innerText = "JS Example - Type into the input to make this text change"
+
+var input = document.createElement('input')
+input.setAttribute('type', 'text')
+
+document.body.innerText = '';
+document.body.appendChild(h1);
+document.body.appendChild(input);
+
+input.addEventListener('change', function() {
+    h1.innerText = input.value
+})
+    </script>
+  </head>
+
+
 
   <body>
     <!-- Here is our main header that is used accross all the pages of our website -->
