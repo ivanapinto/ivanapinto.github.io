@@ -21,7 +21,6 @@ body {
   margin: 0 auto;
 }
 
-/*  typography */
 
 h1, h2, h3, h4 {
   font-family: Calibri, Arial;
@@ -122,7 +121,6 @@ input[type="submit"] {
 } 
 
 
-/*  main layout */
 
 main {
   display: flex;
@@ -158,7 +156,7 @@ footer {
     <header>
       <h1>How to make a website accessible</h1>
 
-      <!-- Even is it's not mandatory, it's common practice to put the main navigation menu within the main header -->
+      <!-- main navigation menu within the main header -->
 
       <nav>
         <ul>
@@ -184,44 +182,44 @@ footer {
       <article>
         <h2>Accessible Page Layout </h2>
 
-      <p>The easiest way to create an accessible website is to start with semantic HTML tags for landmarks. HTML by deafualt is accessible and semantic HTML tags will automatically populate the accessibility tree with the correct name, role, state and vaule without any additional work</p>
-<p>Start with a simple layout with landmark elements, where the navigation bar is at the top, followed by a  content area and a footer on the botton. Navigation elements are used as shortcuts for assistive technology users, so they can quickly jump to a specific section fo the page. It is very similar to how visual users will look at visual cues on a pake like a navigation bar, headings, etc.</p>
+      <p>The easiest way to create an accessible website is to start with semantic HTML tags for landmarks. HTML by default is accessible and semantic HTML tags will automatically populate the accessibility tree with the correct name, role, state and value without any additional work</p>
+<p>Start with a simple layout with landmark elements, where the navigation bar is at the top, followed by a  content area and a footer on the bottom. Navigation elements are used as shortcuts for assistive technology users, so they can quickly jump to a specific section of the page. It is very similar to how visual users will look at visual cues on a page like a navigation bar, headings, etc.</p>
 
         <h3>Navigation Bar</h3>
 
-       <p> The best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of x items". They will know how long the list is and decide if they want to tab through the entire list. You can definitley style your navigation bar using CSS. </p>
+       <p> The best way to create a navigation bar is by using the NAV element with an unordered list. Screen reader users will hear "Navigation landmark, list of x items". They will know how long the list is and decide if they want to tab through the entire list. You can definitely style your navigation bar using CSS. </p>
         <p> Using aria-current to tell the screen reader that we are currently on this page. This can also be used for date pickers to show the current date. We can also use CSS for visual users. </p>
    
        <h3>Skip Link</h3>
 
-<p> Add a skip link for keyboard users. It is simple and improves their experience. It should be the first thing when tabbing on a web page and it allows users to directly skip to the main content of a web page and bypass blocks of content such as navigation or ads. Add an ANCHOR elemet inside of the NAV tag</p>
+<p> Add a skip link for keyboard users. It is simple and improves their experience. It should be the first thing when tabbing on a web page and it allows users to directly skip to the main content of a web page and bypass blocks of content such as navigation or ads. Add an ANCHOR element inside of the NAV tag</p>
       
 <h3> Main Content</h3>
 <p> xxxxx.</p>
         
         
         <h3> Footer</h3>
-<p> User the FOOTER element for secondary information, such as copyright</p>
+<p> Use the FOOTER element for secondary information, such as copyright</p>
 
 <h3>Headings</h3>
 <p>Most of the screen reader users will first look at a page heading structure in order to get a feeling for the page. Similar to how people use the table of contents in a book rather than scanning the entire book.</p>
-<p> It is important that we do not skip headings or use headings for aestethic reasons becuase the headings level describes the struction of the page.</p>
+<p>It is important that we do not skip headings or use headings for aesthetic reasons because the headings level describes the structure of the page.</p>
       
   <h4>Bad Example - need to style WIP</h4>
   <p>This is styled to look like a heading</p>
     <h4>Good Example</h4>
-    <p>This is H4 heading and the screen reader will read</p>
+    <p>This is H4 heading and the screen reader will include that in the heading structure. </p>
     
 <h3> Section</h3>
 <p> add text here</p>
 
 <h3> Secondary Content</h3>
-    <p>Use the ASIDE tag for secondary content, anything that is not part of the  subject </p>
+    <p>Use the ASIDE tag for secondary content, anything that is not part of the subject. </p>
         
     <h2>Accessible Interactive Elements</h2>    
         
        <h3>Form</h3> 
-  <p>The FORM tag creates a container for various input elements like text fields, checkboxes, radio buttons, and buttons. Each element shoudl have input and label </p>
+  <p>The FORM tag creates a container for various input elements like text fields, checkboxes, radio buttons, and buttons. Each element should have input and label. </p>
   <form>
 <label for="name">Name</label>
 <input type="text" id="name" required>
