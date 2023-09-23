@@ -220,52 +220,95 @@ footer {
         
        <h3>Form</h3> 
   <p>The FORM tag creates a container for various input elements like text fields, checkboxes, radio buttons, and buttons. Each element should have input and label. </p>
+        <p> The for attribute and and id attribute establish the programatic relationship. User can click either direclty in the field or on the label and both will focus the input. You can also give it a required attribute and the browser will incude a built in warning when you try to submit </p>
   <form>
-<label for="name">Name</label>
-<input type="text" id="name" required>
-<p>for and id establishes the programatic relationship. User can click either direclty in the field or on the label and both will focus the input. You can also give it a required attribute and the browser will incude a built in warning when you try to submit </p>
+    <h4>Checkbox </h4>
+  <input type="checkbox" id="dog" name="dog" value="Dog">
+<label for="dog">I like dogs</label> <br>
+<input type="checkbox" id="cat" name="cat" value="Cat">
+<label for="cat">I like cats</label> <br>
+    
+ <h4>Radio Button - only a single value can be selected</h4>
+<input type="radio" id="light" name="theme" value="Light">
+<label for="light">Light</label> <br>
+<input type="radio" id="dark" name="theme" value="Dark">
+<label for="dark">Dark</label> <br>
+   
+  <h4>Text Required</h4>
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname">
 
+    <h4> Password </h4>
+<label for="pwd">Password:</label>
+<input type="password" id="pwd" name="pwd">
+    
+    <h4> Email - Required </h4>
 <label for="email">Email</label>
 <input type="email" id="email" required>
-<p> When using the email type, browser will validat that the value is email. It also allows auto-completion which is very helpful, especially for people that have motor impairments. </p>
+<p> When using the email type, browser will validate that the value is email. It also allows auto-completion which is very helpful, especially for people that have motor impairments. </p>
 
-      <label>
-          <input type="checkbox">
-          I accept all the <a href="#terms">terms and conditions</a>
-        </label>
+    <h4> Date </h4>
+    <label for="dob">Date of birth:</label>
+<input type="date" id="dob" name="date_of_birth">
+    
+    <h4> Datetime-local - date and time </h4>
+    <label for="birthdaytime">Birthday (date and time):</label>
+<input type="datetime-local" id="birthdaytime" name="birthdaytime">
+    
+    <h4> Time </h4>
+    <label for="appt">Select a time:</label>
+<input type="time" id="appt" name="appt">
+    
+    <h4> Tel </h4>
+    <label for="phone">Enter your phone number:</label>
+<input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}">
+    
+    <h4> URL </h4>
+<label for="homepage">Add your homepage:</label>
+<input type="url" id="homepage" name="homepage">
+    
+    <h4> Number with a min and max values </h4>
+    <input type="number" id="quantity" name="quantity" min="1" max="5">
+    
+    <h4> Range </h4>
+    <label for="volume">Volume:</label>
+<input type="range" id="volume" name="volume" min="0" max="10">
+    
+    <h4> Week </h4>
+    <label for="week">Select a week:</label>
+<input type="week" id="week" name="week">
+    
+    <h4> Month </h4>
+    <label for="bdaymonth">Birthday (month and year):</label>
+<input type="month" id="bdaymonth" name="bdaymonth" min="1930-01" value="2000-01">
+    
+    <h4> Drop-down list </h4><
+  <label for="food">Favorite Food:</label>
+<select name="food" id="food">
+  <option value="chocolate">Chocolate</option>
+  <option value="ice_cream">Ice Cream</option>
+</select>
+    
+    <h4> Search </h4>
+    <label for="gsearch">Search in Google:</label>
+<input type="search" id="gsearch" name="gsearch">
+    
+     <h4>Upload a file </h4>
+    <label for="myfile">Select a file:</label>
+<input type="file" id="myfile" name="myfile">
+    
+    <h4> Hidden control - not displayed but values will be still submitted to the server </h4>
+    <input type="hidden" id="custId" name="custId" value="3487">
 
+    <h4> Submit </h4>
         <input type="submit" value="Sign Up">
       </form>
+        <p> Image as a submit button </p>
+        <input type="image" src="submit_img.png" alt="Submit" width="48" height="48">
 
-   <h4> Another Form - check on this</h4>
-   <form action ="/registration" method = "POST">
-    <!--Use value and name to send the info to the server. 
-    Use label to add a label-->
-    <label for ="username">Username:</label> <br>
-    <input type="text" name ="username"> <br>
-
-    <label for ="password">Password:</label> <br>
-    <input type="password" /><br>
-
-    <input type="checkbox" name="dog" value ="Dog" />
-    <label for ="dog"> I own a dog</label> <br>
-    <input type="checkbox" name="cat" value ="Cat" />
-    <label for ="cat"> I own a cat</label> <br>
-    <!--Radio buttons - like checkboxes but only one from the group can be checked-->
-    <input type="radio" name="right" value="Right" />
-    <label for ="right">I am right-handed</label>  <br>
-     <input type ="radio"  name ="left" value = "Left"  />
-     <label for="left"> I am left-handed</label> <br>
-    <input type="submit" />
-
-    <input type="number" name="age" />
-    <input type ="email" name = "email" />
-    <input type ="file" name = "file" />
+        <h4> Reset </h4>
+  <input type="reset">
    
-    <!--drop-down list-->
-    <select name="food">
-    <option value="chocolate">Chocolate</option>
-    <option value="ice Cream">Ice Cream</option></select>
 </form>
 
   <h3>Checkbox Input</h3> 
@@ -283,15 +326,6 @@ footer {
   <p>This label is associated with the actual LABEL tag. The screen readed will read "Real label edit blank"</p>
 
 
-  <H5>Need to check</H5>
-  
-     <!--Use value and name to send the info to the server. 
-    Use label to add a label-->
- <label for="my-checkbox">My Checkbox</label>
-  <input type="checkbox" id="my-checkbox">
-
-    <label for ="username">Username:</label> <br>
-    <input type="text" name ="username"> <br>
   
   <h3>Button</h3> 
   <h4>Examples</h4>
@@ -460,4 +494,3 @@ It is a tool that gives a developer the power to directly modify the accessibili
 
   </body>
 </html> 
-      
