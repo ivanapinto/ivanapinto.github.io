@@ -233,6 +233,18 @@ footer {
 <label for="light">Light</label> <br>
 <input type="radio" id="dark" name="theme" value="Dark">
 <label for="dark">Dark</label> <br>
+
+<h4> Group of Radio Buttons - Fieldset </h4>
+<fieldset id="size">
+  <input type="radio" value="2'" name="size"> 2 person table
+  <input type="radio" value="4'" name="size" checked> 4 person table
+  <input type="radio" value="6'" name="size"> 6 person table
+</fieldset>
+
+<fieldset id="location">
+  <input type="radio" value="indoors" name="location" checked> Indoors
+  <input type="radio" value="outdoors" name="location"> Outdoors
+</fieldset>
    
   <h4>Text Required</h4>
 <label for="fname">First name:</label>
