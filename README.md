@@ -234,17 +234,23 @@ footer {
 <input type="radio" id="dark" name="theme" value="Dark">
 <label for="dark">Dark</label> <br>
 
-<h4> Group of Radio Buttons - Fieldset </h4>
-<fieldset id="size">
-  <input type="radio" value="2'" name="size"> 2 person table
-  <input type="radio" value="4'" name="size" checked> 4 person table
+<h4> Group of Radio buttons</h4>
+    
+    <fieldset id="size">
+      <label> <input type="radio" value="2'" name="size"> 2 person table </label>
+      <label>
+        <input type="radio" value="4'" name="size" checked> 4 person table </label>
+      <label>
   <input type="radio" value="6'" name="size"> 6 person table
+      </label>
 </fieldset>
 
 <fieldset id="location">
-  <input type="radio" value="indoors" name="location" checked> Indoors
+  <label>
+    <input type="radio" value="indoors" name="location" checked> Indoors </label>
+  <label>
   <input type="radio" value="outdoors" name="location"> Outdoors
-</fieldset>
+    </fieldset> </label>
    
   <h4>Text Required</h4>
 <label for="fname">First name:</label>
@@ -317,6 +323,8 @@ footer {
       </form>
         <p> Image as a submit button </p>
         <input type="image" src="submit_img.png" alt="Submit" width="48" height="48">
+        <p> You can also use the Button element </p>
+        <button type=”submit”>Book table</button>
 
         <h4> Reset </h4>
   <input type="reset">
