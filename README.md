@@ -233,8 +233,8 @@ footer {
 <label for="light">Light</label> <br>
 <input type="radio" id="dark" name="theme" value="Dark">
 <label for="dark">Dark</label> <br>
-
-<h4> Group of Radio buttons</h4>
+    
+    <h4> Group of Radio buttons</h4>
     
     <fieldset id="size">
       <label> <input type="radio" value="2'" name="size"> 2 person table </label>
@@ -251,6 +251,7 @@ footer {
   <label>
   <input type="radio" value="outdoors" name="location"> Outdoors
     </fieldset> </label>
+
    
   <h4>Text Required</h4>
 <label for="fname">First name:</label>
@@ -268,6 +269,7 @@ footer {
     <h4> Date </h4>
     <label for="dob">Date of birth:</label>
 <input type="date" id="dob" name="date_of_birth">
+   
     
     <h4> Datetime-local - date and time </h4>
     <label for="birthdaytime">Birthday (date and time):</label>
@@ -292,6 +294,12 @@ footer {
     <label for="volume">Volume:</label>
 <input type="range" id="volume" name="volume" min="0" max="10">
     
+      <div>
+      <label for "booking_people">Number of People</label>
+      <input type="range" id="booking_people" name="booking_people" min="1" max="10" value="4" oninput="this.nextElementSibling.value = this.value">
+        <output>4</output>
+      </div>
+    
     <h4> Week </h4>
     <label for="week">Select a week:</label>
 <input type="week" id="week" name="week">
@@ -299,13 +307,24 @@ footer {
     <h4> Month </h4>
     <label for="bdaymonth">Birthday (month and year):</label>
 <input type="month" id="bdaymonth" name="bdaymonth" min="1930-01" value="2000-01">
-    
-    <h4> Drop-down list </h4><
+ 
+  
+   
+    <h4> Drop-down list </h4>
   <label for="food">Favorite Food:</label>
 <select name="food" id="food">
   <option value="chocolate">Chocolate</option>
   <option value="ice_cream">Ice Cream</option>
 </select>
+    
+     <div>
+      <label for="booking_location">Location</label>
+    <input id="booking_location" name="booking_location" list="locations">
+      <datalist id="locations">
+        <option value="Downtown"></option>
+        <option value="Uptown"></option>
+      </datalist>
+    </div>
     
     <h4> Search </h4>
     <label for="gsearch">Search in Google:</label>
@@ -323,8 +342,6 @@ footer {
       </form>
         <p> Image as a submit button </p>
         <input type="image" src="submit_img.png" alt="Submit" width="48" height="48">
-        <p> You can also use the Button element </p>
-        <button type=”submit”>Book table</button>
 
         <h4> Reset </h4>
   <input type="reset">
@@ -514,3 +531,4 @@ It is a tool that gives a developer the power to directly modify the accessibili
 
   </body>
 </html> 
+      
