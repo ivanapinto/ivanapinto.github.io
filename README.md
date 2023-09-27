@@ -229,7 +229,7 @@ footer {
 <label for="cat">I like cats</label> <br>
     
  <h4>Radio Button - only a single value can be selected</h4>
-<input type="radio" id="light" name="theme" value="Light">
+<input type="radio" id="light" name="theme" required value="Light">
 <label for="light">Light</label> <br>
 <input type="radio" id="dark" name="theme" value="Dark">
 <label for="dark">Dark</label> <br>
