@@ -409,6 +409,16 @@ footer {
     <p> HTML has a built-in keyboard accessibility. When working wtih non-semantic elemtns, ARIA can help to provide missing semantics
     <h3>Keyboard focus</h3>
     <p>When tabbing, browser fucus should highlight interactive elements. The focus ring indicates to a visual keyboard user where they are on a web page. You can replace it with something more consistent with your branding using borders, text size and text decorations.<p>
+    
+ <h2>MEDIA</h2>
+    <h3> Audio </h3>
+    <audio controls>
+<source src=”music.ogg” type=”audio/ogg”>
+    </audio>
+    <h3> Video </h3>
+<video controls> 
+<source src=”dance.mp4” type=”video/mp4>
+    </video>
 
     <h2>WAI-ARIA</h2>
     <p> WAI-ARIA stands for the Web Accessibility Initiative, Accessible, Rich Internet Applications.
