@@ -487,31 +487,17 @@ It is a tool that gives a developer the power to directly modify the accessibili
       
       </p>
 
-      <h3> Making Non-semantic Buttons Accessible </h3>
-<p> Whenever possible, it is recommended to use native HTML button.  It is supported by assistive technology and provides keyboard and focus requirements by default.</p>
-<p> Here is what you need to do if a non-semantic elements, such as DIV, was used to mark up a button </P>
-<h4> Building keyboard focus back in </h4>
-<p> Use tabindex="0" so the button is tabbable. </p>
-<h4> Building keyboard accessibility back in </h4>
-<p> Use JS to activate the button via the Enter/Return key. </p> 
-<h4> Building button styling back in </h4>
-<p> Use CSS to style the button so it looks like a button </p>
-<h4> Building support for screen readers back in </h4>
-<p> Use role="button" so screen reader users know they are interacting with button </p>
-<h4> Building text labels back in </h4>
-
 
 <h3> Making Non-semantic Buttons Accessible </h3>
 <p>
     When adding buttons to your site, you'll want to make sure they are fully accessible and usable for all visitors. <br> Whenever possible, use native <code>&lt;button&gt;</code> and <code>&lt;input type="button"&gt;</code> elements. These automatically include built-in accessibility features.
   </p>
 
-
  <p>If you have to use custom buttons, here are some key things to consider:<p>
 
     <ul>
       <li>
-        <strong>Assistive technology:</strong> The button role (<code>role="button"</code>) identifies an element as a button to assistive technology such as screen readers. Adding <code>role="button"</code> tells assistive technology that the element is a button but It won't magically make it function like a button. Without some extra coding, it won't be accessible for users who rely on a keyboard or screen reader.
+        <strong>Support for screen readers:</strong> Adding <code>role="button"</code> tells assistive technology that the element is a button but It won't magically make it function like a button. Without some extra coding, it won't be accessible for users who rely on a keyboard or screen reader.
       </li>
 
       <li>
@@ -527,7 +513,7 @@ It is a tool that gives a developer the power to directly modify the accessibili
       </li>
 
       <li>
-        <strong>Appearance:</strong> Style your buttons with CSS to visually convey that they are clickable. This could include styling like color changes on hover/focus and adding borders
+        <strong>Appearance:</strong> Style your buttons with CSS to visually convey that they are clickable. This could include styling like color changes on hover/focus and adding borders.
       </li>
     </ul>
 
