@@ -499,6 +499,54 @@ It is a tool that gives a developer the power to directly modify the accessibili
 <h4> Building support for screen readers back in </h4>
 <p> Use role="button" so screen reader users know they are interacting with button </p>
 <h4> Building text labels back in </h4>
+
+
+<h3> Making Non-semantic Buttons Accessible </h3>
+<p>
+    When adding buttons to your site, you'll want to make sure they are fully accessible and usable for all visitors. <br> Whenever possible, use native <code>&lt;button&gt;</code> and <code>&lt;input type="button"&gt;</code> elements. These automatically include built-in accessibility features.
+  </p>
+
+
+ <p>If you have to use custom buttons, here are some key things to consider:<p>
+
+    <ul>
+      <li>
+        <strong>Assistive technology:</strong> The button role (<code>role="button"</code>) identifies an element as a button to assistive technology such as screen readers. Adding <code>role="button"</code> tells assistive technology that the element is a button but It won't magically make it function like a button. Without some extra coding, it won't be accessible for users who rely on a keyboard or screen reader.
+      </li>
+
+      <li>
+        <strong>Keyboard access:</strong> Apply <code>tabindex="0"</code> so keyboard focus moves to the button. Users should be able to tab through the buttons on your site.
+      </li>
+
+      <li>
+        <strong>Functionality:</strong> Use JavaScript to make sure your custom buttons respond when Enter or Space is pressed. This mimics default button behavior.
+      </li>
+
+      <li>
+        <strong>Labeling:</strong> Buttons should have discernible text indicating their action, such as "Add to Cart." For icon buttons, use <code>aria-label</code> or <code>aria-labelledby</code> to provide an accessible name.
+      </li>
+
+      <li>
+        <strong>Appearance:</strong> Style your buttons with CSS to visually convey that they are clickable. This could include styling like color changes on hover/focus and adding borders
+      </li>
+    </ul>
+
+
+  <section>
+    <h4>Examples:</h4>
+
+    <p>Using native <code>&lt;button&gt;</code> element</p>
+
+    <pre><code>&lt;button type="button"&gt;My Button&lt;/button&gt;</code></pre>
+
+    <p>Using custom button with div element:</p>
+
+    <p>
+      <a href="https://codepen.io/ivanapinto/pen/LYaRvav">My CodePen Demo</a>
+    </p>
+
+
+
 <p>
 
 <script>
